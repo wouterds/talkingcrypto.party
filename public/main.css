@@ -20,64 +20,70 @@ body {
   min-height: 100%;
 }
 
-.wrapper {
-  min-height: 100%;
-}
-
 html {
   font-family: Roboto, Helvetica Neue, Helvetica, sans-serif;
   font-size: 62.5%;
 }
 
 body {
-  background: #333;
+  background: #141E30;
+  background: -webkit-linear-gradient(to bottom, #243B55, #141E30);
+  background: linear-gradient(to bottom, #243B55, #141E30);
   font-size: 1em;
-  padding: 10px;
+  color: #373D48;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.25;
 }
 
 .wrapper {
-  background: #fff;
   position: relative;
+  max-width: 960px;
+  border-radius: 15px;
+  background: #fff;
+  margin: 125px auto;
 }
 
 .main {
   text-align: center;
-  padding: 100px 25px 25px;
+  padding: 75px 25px 25px;
+  z-index: 0;
+  position: relative;
 }
 
 h1 {
   font-weight: 300;
-  font-size: 5em;
+  font-size: 4em;
   margin-bottom: 100px;
 }
 
 .footer {
-  position: absolute;
-  width: 100%;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  vertical-align: bottom;
-  padding-bottom: 20px;
+  position: relative;
+  border-top: 1px solid #EEE;
+  overflow: hidden;
+  padding: 20px;
 }
 
 .donations {
   font-weight: 500;
   font-size: 1.1em;
-  margin-top: 175px;
-  color: #444;
+  color: #4A5664;
   text-transform: uppercase;
   line-height: 1.6;
   display: inline-block;
-  position: absolute;
-  left: 25px;
-  bottom: 20px;
+  float: left;
 }
 
 .donations .title {
   margin-bottom: 8px;
   display: inline-block;
-  color: #BBB;
+  color: #95A1AF;
 }
 
 .donations .fa-heart {
@@ -91,14 +97,11 @@ h1 {
 .copyright {
   font-weight: 500;
   font-size: 1.1em;
-  margin-top: 175px;
-  color: #444;
+  color: #4A5664;
   text-transform: uppercase;
   line-height: 1.6;
   display: inline-block;
-  position: absolute;
-  right: 25px;
-  bottom: 20px;
+  float: right;
 }
 
 .copyright a {
@@ -107,32 +110,4 @@ h1 {
 }
 
 @media screen and (max-width: 540px) {
-  .copyright {
-    margin-top: 25px;
-  }
-
-  .copyright,
-  .donations {
-    text-align: center;
-    display: block;
-    position: relative;
-    left: auto;
-    right: auto;
-    bottom: auto;
-  }
-}
-
-@media screen and (max-width: 440px) {
-  .main {
-    padding-top: 50px;
-  }
-
-  .donations {
-    margin-top: 150px;
-  }
-
-  h1 {
-    font-size: 4em;
-    margin-bottom: 65px;
-  }
 }
