@@ -1,0 +1,6 @@
+version: '2'
+
+services:
+  nginx:
+    env_file:
+      - docker-prod.env

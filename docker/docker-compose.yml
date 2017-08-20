@@ -1,0 +1,15 @@
+version: '2'
+
+services:
+  nginx:
+    image: docker.wouterdeschuyter.be/internal-talkingcrypto-website-nginx
+    restart: unless-stopped
+    env_file:
+      - docker.env
+    networks:
+        - default
+        - nginxproxy_default
+
+networks:
+  nginxproxy_default:
+    external: true
