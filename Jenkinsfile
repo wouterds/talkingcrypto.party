@@ -37,7 +37,7 @@ node {
     deployProduction()
 
     // Deploy staging if needed
-    deployStaging()
+    // deployStaging()
   }
 
   // Leave Jenkins clean behind
