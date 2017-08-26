@@ -6,9 +6,10 @@ function backgroundAnimation() {
   Particles.init({
     selector: '.background',
     color: '#ffffff',
-    minDistance: 130,
-    speed: 0.3,
-    connectParticles: true
+    speed: 0.25,
+    connectParticles: true,
+    maxParticles: 125,
+    minDistance: 125
   });
 }
 
