@@ -45,14 +45,14 @@ body {
 .wrapper {
   position: relative;
   max-width: 960px;
-  border-radius: 15px;
+  border-radius: 10px;
   background: #fff;
   margin: 100px auto;
 }
 
 .main {
   text-align: center;
-  padding: 75px 25px 25px;
+  padding: 50px 25px 25px;
   z-index: 0;
   position: relative;
 }
@@ -81,13 +81,14 @@ body {
   display: block;
   padding: 15px;
   border-bottom: 1px solid #eee;
-  color: #4A5664;
+  color: #646f7c;
+  background: #f0f0f0;
 }
 
 h1 {
   font-weight: 300;
   font-size: 4em;
-  margin-bottom: 75px;
+  margin-bottom: 50px;
 }
 
 .footer {
@@ -95,7 +96,7 @@ h1 {
   border-top: 1px solid #EEE;
   overflow: hidden;
   padding: 20px;
-  margin-top: 50px;
+  margin-top: 35px;
 }
 
 .donations {
