@@ -176,6 +176,11 @@ a {
 }
 
 @media screen and (max-width: 540px) {
+  .main,
+  .footer {
+    padding: 15px;
+  }
+
   .donations {
     float: none;
   }
