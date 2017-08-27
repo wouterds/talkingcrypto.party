@@ -32,6 +32,7 @@ body {
   position: absolute;
   top: 0;
   width: 100%;
+  background: #fff;
 }
 
 .background {
@@ -176,6 +177,11 @@ a {
 }
 
 @media screen and (max-width: 540px) {
+  .background,
+  .background-particles {
+    display: none;
+  }
+
   .main,
   .footer {
     padding: 15px;
