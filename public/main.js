@@ -55,33 +55,58 @@ function postAjax(url, data, success) {
 }
 
 function app() {
-  // Get OAuth code
-  var code = getParameterByName('code');
-
-  // Invalid code?
-  if (typeof code === 'undefined') {
+  if (window.location.href.indexOf('/slack-bot/oauth-link') === -1) {
     return;
   }
 
-  // Invalid code?
-  if (code === null) {
-    return;
-  }
+  document.getElementById('enableBot').addEventListener('submit', function(e) {
+    e.preventDefault();
 
-  // Invalid code?
-  if (code.length === 0) {
-    return;
-  }
+    var currency = document.getElementById('currencySelect').value;
 
-  // Ajax call
-  postAjax('https://slack-bot.talkingcrypto.party/slack/link', { code: code }, function(response) {
-    alert('Succesfully added Price Bot to Slack!');
+    // Get OAuth code
+    var code = getParameterByName('code');
+
+    // Invalid code?
+    if (typeof code === 'undefined') {
+      alert('Something went wrong, please try again.');
+      window.location.href = 'https://talkingcrypto.party';
+      return;
+    }
+
+    // Invalid code?
+    if (code === null) {
+      alert('Something went wrong, please try again.');
+      window.location.href = 'https://talkingcrypto.party';
+      return;
+    }
+
+    // Invalid code?
+    if (code.length === 0) {
+      alert('Something went wrong, please try again.');
+      window.location.href = 'https://talkingcrypto.party';
+      return;
+    }
+
+    // Ajax call
+    postAjax('https://slack-bot.talkingcrypto.party/slack/link', { code: code, currency: currency }, function(response) {
+      alert('Succesfully added Price Bot to Slack!');
+      window.location.href = 'https://talkingcrypto.party';
+    });
   });
 }
 
 function done() {
-  var el = document.getElementsByClassName('wrapper')[0];
-  el.classList.remove('loading');
+  var wrapper = document.getElementsByClassName('wrapper')[0];
+  var mainContent = document.getElementsByClassName('main-content')[0];
+  var slackBotOauthLinkContent = document.getElementsByClassName('slack-bot-oauth-link-content')[0];
+
+  if (window.location.href.indexOf('/slack-bot/oauth-link') !== -1) {
+    mainContent.classList.add('hidden');
+    slackBotOauthLinkContent.classList.remove('hidden');
+  }
+
+  wrapper.classList.remove('loading');
 }
 
 function tracking() {

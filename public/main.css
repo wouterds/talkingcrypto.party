@@ -35,6 +35,10 @@ body {
   background: #fff;
 }
 
+.hidden {
+  display: none;
+}
+
 .background {
   position: fixed;
   top: 0;
@@ -61,13 +65,13 @@ body {
   border-radius: 10px;
   background: #fff;
   margin: 25px auto;
+  font-size: 1.4em;
 }
 
 .main {
   padding: 25px;
   z-index: 0;
   position: relative;
-  font-size: 1.4em;
 }
 
 .loading .content {
@@ -119,12 +123,59 @@ a {
 .button {
   background: #3AAF85;
   color: #fff;
-  font-weight: 400;
-  padding: 4px 8px 3px;
+  padding: 4px 10px 3px;
   border-radius: 3px;
   display: inline-block;
   text-decoration: none;
   margin: 5px 0;
+  border: 0;
+  outline: 0;
+  font-weight: 400;
+  font-size: inherit;
+  line-height: inherit;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+input.button {
+  padding-top: 3px;
+  padding-bottom: 4px;
+}
+
+.select-wrapper {
+  border: 1px solid #E1E1E8;
+  border-radius: 3px;
+  display: inline-block;
+  position: relative;
+  padding-right: 14px;
+}
+
+.select {
+   background: #fff;
+   appearance: none;
+   -webkit-appearance: none;
+   -moz-appearance:none;
+   padding: 3px 10px 2px;
+   font-weight: 400;
+   font-size: inherit;
+   line-height: inherit;
+   vertical-align: middle;
+   color: #4A5664;
+   outline: 0;
+   border: 0;
+   margin-right: 3px;
+}
+
+.select-wrapper:after {
+  content: "\f0d7";
+  display: inline-block;
+  position: absolute;
+  top: 7px;
+  right: 9px;
+  bottom: 0;
+  font: normal normal normal 14px/1 FontAwesome;
+  color: #4A5664;
+  font-size: 15px;
 }
 
 .button:hover {
@@ -136,11 +187,11 @@ a {
   border-top: 1px solid #EEE;
   overflow: hidden;
   padding: 25px;
+  font-size: 0.785714286em;
 }
 
 .donations {
   font-weight: 500;
-  font-size: 1.1em;
   color: #4A5664;
   text-transform: uppercase;
   line-height: 1.6;
@@ -164,7 +215,6 @@ a {
 
 .copyright {
   font-weight: 500;
-  font-size: 1.1em;
   color: #4A5664;
   text-transform: uppercase;
   line-height: 1.6;

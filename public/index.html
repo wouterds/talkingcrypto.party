@@ -25,44 +25,64 @@
                 </div>
             </div>
             <div class="content">
-                <h1>Talking Crypto</h1>
+                <div class="main-content">
+                    <h1>Talking Crypto</h1>
 
-                <h2>Slack Community</h2>
-                <p>
-                    Join our Slack if you're interested in crypto, want to learn more or share your experiences with like minded people.
-                    <br>
-                    <a href="https://slack.talkingcrypto.party" class="button">Join Slack</a>
-                </p>
+                    <h2>Slack Community</h2>
+                    <p>
+                        Join our Slack if you're interested in crypto, want to learn more or share your experiences with like minded people.
+                        <br>
+                        <a href="https://slack.talkingcrypto.party" class="button">Join Slack</a>
+                    </p>
 
-                <h2>Slack Price Bot</h2>
-                <p>
-                    Add our Slack Price Bot to your own Slack to get realtime prices right in Slack.
-                    Example usage: <code class="code">!price BTC</code>
-                    <br>
-                    <a href="https://slack.com/oauth/authorize?scope=team:read,channels:history,chat:write:bot&client_id=201785062880.209904394133" class="button">Add Price Bot to Slack</a>
-                </p>
+                    <h2>Slack Price Bot</h2>
+                    <p>
+                        Add our Slack Price Bot to your own Slack to get realtime prices right in Slack.
+                        Example usage: <code class="code">!price BTC</code>
+                        <br>
+                        <a href="https://slack.com/oauth/authorize?scope=team:read,channels:history,chat:write:bot&client_id=201785062880.209904394133" class="button">Add Price Bot to Slack</a>
+                    </p>
 
-                <h2>Currencies API</h2>
-                <p>
-                    We have some REST API endpoints to get crypto currency information, updated minutely. Example usage:
-                </p>
-                <ul>
-                    <li>
-                        <a href="https://api.talkingcrypto.party/currencies"><code class="code">https://api.talkingcrypto.party/currencies</code></a>
-                    </li>
-                    <li>
-                        <a href="https://api.talkingcrypto.party/currencies?include=price"><code class="code">https://api.talkingcrypto.party/currencies?include=price</code></a>
-                    </li>
-                    <li>
-                        <a href="https://api.talkingcrypto.party/currencies/1"><code class="code">https://api.talkingcrypto.party/currencies/1</code></a>
-                    </li>
-                    <li>
-                        <a href="https://api.talkingcrypto.party/currencies?symbol=BTC"><code class="code">https://api.talkingcrypto.party/currencies?symbol=BTC</code></a>
-                    </li>
-                    <li>
-                        <a href="https://api.talkingcrypto.party/currencies?symbol=BTC,LTC,ETH&include=price"><code class="code">https://api.talkingcrypto.party/currencies?symbol=BTC,LTC,ETH&include=price</code></a>
-                    </li>
-                </ul>
+                    <h2>Currencies API</h2>
+                    <p>
+                        We have some REST API endpoints to get crypto currency information, updated minutely. Example usage:
+                    </p>
+                    <ul>
+                        <li>
+                            <a href="https://api.talkingcrypto.party/currencies"><code class="code">https://api.talkingcrypto.party/currencies</code></a>
+                        </li>
+                        <li>
+                            <a href="https://api.talkingcrypto.party/currencies?include=price"><code class="code">https://api.talkingcrypto.party/currencies?include=price</code></a>
+                        </li>
+                        <li>
+                            <a href="https://api.talkingcrypto.party/currencies/1"><code class="code">https://api.talkingcrypto.party/currencies/1</code></a>
+                        </li>
+                        <li>
+                            <a href="https://api.talkingcrypto.party/currencies?symbol=BTC"><code class="code">https://api.talkingcrypto.party/currencies?symbol=BTC</code></a>
+                        </li>
+                        <li>
+                            <a href="https://api.talkingcrypto.party/currencies?symbol=BTC,LTC,ETH&include=price"><code class="code">https://api.talkingcrypto.party/currencies?symbol=BTC,LTC,ETH&include=price</code></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="slack-bot-oauth-link-content hidden">
+                    <h1>Talking Crypto</h1>
+
+                    <h2>Slack Price Bot</h2>
+                    <p>
+                        Configure your preferences below and submit to confirm the installation. To change preferences later on, re-add the bot.
+                    </p>
+
+                    <form action="#" method="post" id="enableBot">
+                        <div class="select-wrapper">
+                            <select name="currency" class="select" id="currencySelect">
+                                <option value="USD">USD</option>
+                                <option value="EUR">EUR</option>
+                            </select>
+                        </div>
+                        <input type="submit" value="Save &amp; enable" class="button">
+                    </form>
+                </div>
             </div>
         </main>
 
