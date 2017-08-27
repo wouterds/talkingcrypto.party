@@ -295,6 +295,7 @@ input.button {
 }
 
 @media screen and (max-width: 540px) {
+  .badge,
   .background,
   .background-particles {
     display: none;
