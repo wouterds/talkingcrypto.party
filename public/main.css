@@ -39,6 +39,11 @@ body {
   display: none;
 }
 
+.badge {
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
 .background {
   position: fixed;
   top: 0;
