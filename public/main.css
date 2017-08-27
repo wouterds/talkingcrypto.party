@@ -156,5 +156,23 @@ a {
   color: inherit;
 }
 
+@media screen and (max-width: 800px) {
+  .wrapper {
+    border-radius: 0;
+    margin: 0;
+  }
+}
+
 @media screen and (max-width: 540px) {
+  .donations {
+    float: none;
+  }
+
+  .copyright {
+    position: relative;
+    text-align: left;
+    right: auto;
+    bottom: auto;
+    margin-top: 25px;
+  }
 }
