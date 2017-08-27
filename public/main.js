@@ -4,7 +4,7 @@
 
 function backgroundAnimation() {
   Particles.init({
-    selector: '.background',
+    selector: '.background-particles',
     color: '#ffffff',
     speed: 0.25,
     connectParticles: true,

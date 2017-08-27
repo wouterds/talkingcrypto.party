@@ -26,16 +26,27 @@ html {
 }
 
 body {
-  background: #141E30;
-  background: -webkit-linear-gradient(to bottom, #243B55, #141E30);
-  background: linear-gradient(to bottom, #243B55, #141E30);
   font-size: 1em;
   line-height: 1.8;
   color: #373D48;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 
 .background {
-  position: absolute;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #141E30;
+  background: -webkit-linear-gradient(to bottom, #243B55, #141E30);
+  background: linear-gradient(to bottom, #243B55, #141E30);
+}
+
+.background-particles {
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -48,7 +59,7 @@ body {
   max-width: 800px;
   border-radius: 10px;
   background: #fff;
-  margin: 100px auto;
+  margin: 50px auto 25px;
 }
 
 .main {
@@ -160,6 +171,7 @@ a {
   .wrapper {
     border-radius: 0;
     margin: 0;
+    min-height: 100%;
   }
 }
 
