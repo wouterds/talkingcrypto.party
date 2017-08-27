@@ -74,7 +74,7 @@ function app() {
   }
 
   // Ajax call
-  postAjax('https://api.talkingcrypto.party/link', { code: code }, function(response) {
+  postAjax('https://slack-bot.talkingcrypto.party/link', { code: code }, function(response) {
     alert('Succesfully added Price Bot to Slack!');
   });
 }
