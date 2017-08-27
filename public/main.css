@@ -30,6 +30,7 @@ body {
   background: -webkit-linear-gradient(to bottom, #243B55, #141E30);
   background: linear-gradient(to bottom, #243B55, #141E30);
   font-size: 1em;
+  line-height: 1.8;
   color: #373D48;
 }
 
@@ -44,59 +45,75 @@ body {
 
 .wrapper {
   position: relative;
-  max-width: 960px;
+  max-width: 800px;
   border-radius: 10px;
   background: #fff;
   margin: 100px auto;
 }
 
 .main {
-  text-align: center;
-  padding: 50px 25px 25px;
+  padding: 25px;
   z-index: 0;
   position: relative;
-}
-
-.main .items {
-  display: inline-block;
-  list-style: inside;
-  list-style-type: none;
-}
-
-.main .items .item {
-  display: inline-block;
-  height: 130px;
-  width: 250px;
-  border: 1px solid #eee;
-  border-radius: 5px;
-  vertical-align: top;
-  margin: 15px;
-}
-
-.main .items .item .item-title {
-  text-transform: uppercase;
   font-size: 1.4em;
-  font-weight: 500;
-  margin-bottom: 20px;
-  display: block;
-  padding: 15px;
-  border-bottom: 1px solid #eee;
-  color: #646f7c;
-  background: #f0f0f0;
 }
 
 h1 {
   font-weight: 300;
-  font-size: 4em;
-  margin-bottom: 50px;
+  font-size: 3em;
+}
+
+h1 + h2 {
+  margin-top: 5px;
+}
+
+h2 {
+  font-size: 1.8em;
+  font-weight: 300;
+  margin-top: 15px;
+  display: block;
+  color: #646f7c;
+}
+
+ul {
+  list-style: inside;
+}
+
+a {
+  text-decoration: inherit;
+}
+
+.code {
+  font-family: "Hack", Consolas, Monaco, "Andale Mono", monospace;
+  background: #F7F7F9;
+  border: 1px solid #E1E1E8;
+  color: #CA2657;
+  padding: 2px 4px 1px;
+  border-radius: 2px;
+  font-size: 0.8em;
+}
+
+.button {
+  background: #3AAF85;
+  color: #fff;
+  font-weight: 400;
+  padding: 4px 8px 3px;
+  border-radius: 3px;
+  display: inline-block;
+  text-decoration: none;
+  margin: 5px 0;
+}
+
+.button:hover {
+  background: #309d76;
 }
 
 .footer {
   position: relative;
   border-top: 1px solid #EEE;
   overflow: hidden;
-  padding: 20px;
-  margin-top: 35px;
+  padding: 25px;
+  margin-top: 15px;
 }
 
 .donations {
@@ -131,12 +148,11 @@ h1 {
   line-height: 1.6;
   display: inline-block;
   position: absolute;
-  bottom: 20px;
-  right: 20px;
+  bottom: 25px;
+  right: 25px;
 }
 
 .copyright a {
-  text-decoration: inherit;
   color: inherit;
 }
 

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="/main.css" rel="stylesheet">
     <link href="//fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+    <link href="//cdn.jsdelivr.net/font-hack/2.020/css/hack.min.css" rel="stylesheet">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
@@ -15,46 +16,40 @@
         <main role="main" class="main">
             <h1>Talking Crypto</h1>
 
-            <ul class="items">
-                <li class="item">
-                    <span class="item-title">
-                        Slack Community
-                    </span>
+            <h2>Slack Community</h2>
+            <p>
+                Join our Slack if you're interested in crypto, want to learn more or share your experiences with like minded people.
+                <br>
+                <a href="https://slack.talkingcrypto.party" class="button">Join Slack</a>
+            </p>
 
-                    <span class="item-content">
-                        coming soon
-                    </span>
+            <h2>Slack Price Bot</h2>
+            <p>
+                Add our Slack Price Bot to your own Slack to get realtime prices right in Slack.
+                Example usage: <code class="code">!price BTC</code>
+                <br>
+                <a href="https://slack.com/oauth/authorize?scope=team:read,channels:history,chat:write:bot&client_id=201785062880.209904394133" class="button">Add Price Bot to Slack</a>
+            </p>
+
+            <h2>Currencies API</h2>
+            <p>
+                We have some REST API endpoints to get crypto currency information, updated minutely. Example usage:
+            </p>
+            <ul>
+                <li>
+                    <a href="https://api.talkingcrypto.party/currencies"><code class="code">https://api.talkingcrypto.party/currencies</code></a>
                 </li>
-                <li class="item">
-                    <span class="item-title">
-                        Slack CryptoBot
-                    </span>
-
-                    <span class="item-content">
-                        <a href="https://slack.com/oauth/authorize?scope=team:read,channels:history,chat:write:bot&client_id=201785062880.209904394133"><img alt="Add to Slack" height="40" width="139" src="https://platform.slack-edge.com/img/add_to_slack.png" srcset="https://platform.slack-edge.com/img/add_to_slack.png 1x, https://platform.slack-edge.com/img/add_to_slack@2x.png 2x" /></a>
-                    </span>
+                <li>
+                    <a href="https://api.talkingcrypto.party/currencies?include=price"><code class="code">https://api.talkingcrypto.party/currencies?include=price</code></a>
                 </li>
-                <li class="item">
-                    <span class="item-title">
-                        Currencies API
-                    </span>
-
-                    <span class="item-content">
-                        <ul>
-                            <li>
-                                <a href="https://api.talkingcrypto.party/currencies">All currencies</a>
-                            </li>
-                            <li>
-                                <a href="https://api.talkingcrypto.party/currencies?include=price">All currencies with price</a>
-                            </li>
-                            <li>
-                                <a href="https://api.talkingcrypto.party/currencies/1">Currency with id 1</a>
-                            </li>
-                            <li>
-                                <a href="https://api.talkingcrypto.party/currencies?symbol=BTC,LTC,ETH&include=price">BTC, LTC &amp; ETH with price</a>
-                            </li>
-                        </ul>
-                    </span>
+                <li>
+                    <a href="https://api.talkingcrypto.party/currencies/1"><code class="code">https://api.talkingcrypto.party/currencies/1</code></a>
+                </li>
+                <li>
+                    <a href="https://api.talkingcrypto.party/currencies?symbol=BTC"><code class="code">https://api.talkingcrypto.party/currencies?symbol=BTC</code></a>
+                </li>
+                <li>
+                    <a href="https://api.talkingcrypto.party/currencies?symbol=BTC,LTC,ETH&include=price"><code class="code">https://api.talkingcrypto.party/currencies?symbol=BTC,LTC,ETH&include=price</code></a>
                 </li>
             </ul>
         </main>
