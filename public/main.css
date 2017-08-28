@@ -65,13 +65,13 @@ body {
   border-radius: 10px;
   background: #fff;
   margin: 25px auto;
-  font-size: 1.4em;
 }
 
 .main {
   padding: 25px;
   z-index: 0;
   position: relative;
+  font-size: 1.4em;
 }
 
 .loading .content {
@@ -186,7 +186,7 @@ input.button {
 .footer {
   border-top: 1px solid #EEE;
   padding: 25px;
-  font-size: 0.785714286em;
+  font-size: 1.1em;
 }
 
 .meta {
@@ -314,11 +314,13 @@ input.button {
 
   .donations {
     float: none;
+    display: block;
   }
 
   .copyright {
-    float: left;
+    float: none;
     margin-top: 15px;
+    display: block;
   }
 
   .badges {
