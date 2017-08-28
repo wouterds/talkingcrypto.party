@@ -39,11 +39,6 @@ body {
   display: none;
 }
 
-.badge {
-  vertical-align: middle;
-  margin-left: 5px;
-}
-
 .background {
   position: fixed;
   top: 0;
@@ -86,6 +81,7 @@ body {
 .loader {
   display: none;
 }
+
 .loading .loader {
   display: block;
 }
@@ -188,11 +184,23 @@ input.button {
 }
 
 .footer {
-  position: relative;
   border-top: 1px solid #EEE;
-  overflow: hidden;
   padding: 25px;
   font-size: 0.785714286em;
+}
+
+.meta {
+  overflow: hidden;
+}
+
+.badges {
+  margin: -2px;
+  margin-top: 13px;
+}
+
+.badge {
+  vertical-align: middle;
+  margin: 2px;
 }
 
 .donations {
@@ -224,9 +232,8 @@ input.button {
   text-transform: uppercase;
   line-height: 1.6;
   display: inline-block;
-  position: absolute;
-  bottom: 25px;
-  right: 25px;
+  float: right;
+  margin-top: 58px;
 }
 
 .copyright a {
@@ -295,7 +302,6 @@ input.button {
 }
 
 @media screen and (max-width: 540px) {
-  .badge,
   .background,
   .background-particles {
     display: none;
@@ -311,10 +317,11 @@ input.button {
   }
 
   .copyright {
-    position: relative;
-    text-align: left;
-    right: auto;
-    bottom: auto;
+    float: left;
+    margin-top: 15px;
+  }
+
+  .badges {
     margin-top: 25px;
   }
 }
