@@ -192,7 +192,7 @@ input.button {
 
 .badges {
   margin: -2px;
-  margin-top: 13px;
+  float: left;
 }
 
 .badge {
@@ -230,7 +230,6 @@ input.button {
   line-height: 1.6;
   display: inline-block;
   float: right;
-  margin-top: 58px;
 }
 
 .copyright a {
