@@ -35,9 +35,6 @@ node {
 
     // Deploy production if needed
     deployProduction()
-
-    // Deploy staging if needed
-    // deployStaging()
   }
 
   // Leave Jenkins clean behind
@@ -59,39 +56,11 @@ def deployProduction() {
   sh 'ssh wouterds@'+SERVER+' "mkdir -p '+folder+'"'
 
   // Copy our docker files to the server, in case it has changed
-  sh 'scp docker/docker-compose.yml wouterds@'+SERVER+':'+folder+'/docker-compose.yml'
   sh 'scp docker/docker-compose-prod.yml wouterds@'+SERVER+':'+folder+'/docker-compose-prod.yml'
-  sh 'scp docker/docker.env wouterds@'+SERVER+':'+folder+'/docker.env'
-  sh 'scp docker/docker-prod.env wouterds@'+SERVER+':'+folder+'/docker-prod.env'
 
   // Deploy on staging
-  sh 'ssh wouterds@'+SERVER+' "cd '+folder+'; docker-compose -f docker-compose.yml -f docker-compose-prod.yml pull"'
-  sh 'ssh wouterds@'+SERVER+' "cd '+folder+'; docker-compose -f docker-compose.yml -f docker-compose-prod.yml up -d"'
-}
-
-def deployStaging() {
-  if (!env.BRANCH_NAME.equals('develop')) {
-    return
-  }
-
-  // Separate folder per environment
-  def folder = DOCKER_FOLDER + '-stag'
-
-  // Deploy staging
-  sh 'echo Deploying staging..'
-
-  // Make directory, in case it doesn't exist
-  sh 'ssh wouterds@'+SERVER+' "mkdir -p '+folder+'"'
-
-  // Copy our docker files to the server, in case it has changed
-  sh 'scp docker/docker-compose.yml wouterds@'+SERVER+':'+folder+'/docker-compose.yml'
-  sh 'scp docker/docker-compose-stag.yml wouterds@'+SERVER+':'+folder+'/docker-compose-stag.yml'
-  sh 'scp docker/docker.env wouterds@'+SERVER+':'+folder+'/docker.env'
-  sh 'scp docker/docker-stag.env wouterds@'+SERVER+':'+folder+'/docker-stag.env'
-
-  // Deploy on staging
-  sh 'ssh wouterds@'+SERVER+' "cd '+folder+'; docker-compose -f docker-compose.yml -f docker-compose-stag.yml pull"'
-  sh 'ssh wouterds@'+SERVER+' "cd '+folder+'; docker-compose -f docker-compose.yml -f docker-compose-stag.yml up -d"'
+  sh 'ssh wouterds@'+SERVER+' "cd '+folder+'; docker-compose -f docker-compose-prod.yml pull"'
+  sh 'ssh wouterds@'+SERVER+' "cd '+folder+'; docker-compose -f docker-compose-prod.yml up -d"'
 }
 
 def cleanWorkspace() {
