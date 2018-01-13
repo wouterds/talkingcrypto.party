@@ -61,7 +61,7 @@ body {
 
 .wrapper {
   position: relative;
-  max-width: 800px;
+  max-width: 960px;
   border-radius: 10px;
   background: #fff;
   margin: 25px auto;
@@ -186,11 +186,8 @@ input.button {
 .footer {
   border-top: 1px solid #EEE;
   padding: 25px;
-  font-size: 1.1em;
-}
-
-.meta {
   overflow: hidden;
+  font-size: 1.1em;
 }
 
 .badges {
