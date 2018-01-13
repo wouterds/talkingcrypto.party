@@ -2,5 +2,16 @@ version: '2'
 
 services:
   nginx:
-    env_file:
-      - docker-prod.env
+    image: docker.wouterdeschuyter.be/internal-talkingcrypto-website-nginx
+    restart: unless-stopped
+    environment:
+      - VIRTUAL_HOST=talkingcrypto.party
+      - LETSENCRYPT_HOST=talkingcrypto.party
+      - LETSENCRYPT_EMAIL=wouter@wouterdeschuyter.be
+    networks:
+        - default
+        - nginxproxy_default
+
+networks:
+  nginxproxy_default:
+    external: true
